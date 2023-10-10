@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.samsung.android.notepad.MainFragment"
+        android:label="Notepad"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_editorFragment"
+            app:destination="@id/editorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editorFragment"
+        android:name="com.samsung.android.notepad.EditorFragment"
+        android:label="TTTTTT"
+        tools:layout="@layout/fragment_editor" >
+        <argument
+            android:name="noteId"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>
